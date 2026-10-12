@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-50">
+    <div class="text-center mt-20" style="padding: 20px;">
+        <h2>EMPLOYEE CRUD OPERATION</h2>
+        <a href="/employees/add" style="display: inline-block; margin: 15px 0;">add new employee</a>
+        
+        <table border="1" cellpadding="10" cellspacing="0" style="margin: 0 auto; width: 90%; border-collapse: collapse;">
+        <tr style="background-color: #f2f2f2;">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Position</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Date Hired</th>
+            <th>Action</th>
+        </tr>
+        
+        <tbody>
+            {{#each data }}
+            <tr>
+                <td>{{ FirstName }}</td>
+        <td>{{ LastName }}</td>
+        <td>{{ Position }}</td>
+        <td>{{ Department }}</td>
+        <td>{{ Salary }}</td>
+        <td>{{ DateHired }}</td>
+        <td>
+                    <a href="/employees/edit/{{id }}">edit</a> | 
+                    <a href="/employees/delete/{{id }}" onclick="return confirm('Are you sure you want to delete this employee?');">delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    </div>
+
+    <footer class="mt-8 py-4 text-center text-gray-500 text-sm" style="text-align: center; margin-top: 40px;">
+        © 2026 XianFire Framework - Built with ❤️ at Mindoro State University
+    </footer>
+</body>
+</html>

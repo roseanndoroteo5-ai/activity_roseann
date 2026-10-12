@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-50" style="padding: 20px;">
+    <h2>Employee Details</h2>
+    <div>
+        <p><strong>First Name:</strong> {{ data.FirstName }}</p>
+        <p><strong>Last Name:</strong> {{ data.LastName }}</p>
+        <p><strong>Position:</strong> {{ data.Position }}</p>
+        <p><strong>Department:</strong> {{ data.Department }}</p>
+        <p><strong>Salary:</strong> {{ data.Salary }}</p>
+        <p><strong>Date Hired:</strong> {{ data.DateHired }}</p>
+    </div>
+    <br>
+    <a href="/employees">Back to Employee List</a>
+</body>
+</html>
